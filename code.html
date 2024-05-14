@@ -6,10 +6,25 @@
     <title>Ready Daddy Go</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <div class="logo">
+        <img src="ready-daddy-go.png" alt="Ready Daddy Go">
+    </div>
+</header>
 <body onclick="generateStarter()">
-    <header>
-        <h1>Ready Daddy Go</h1>
-    </header>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px; /* Set default text size */
+        }
+        h1 {
+            font-weight: 700; /* Bold font weight for headings */
+        }
+        strong {
+            font-weight: 900; /* Extra bold font weight for strong text */
+        }
+    </style>
     <div id="initialContainer" class="container">
         <p>Click the button below to get a conversation starter!</p>
         <button onclick="generateStarter(event)">Generate Starter</button>
@@ -21,15 +36,25 @@
     <div id="notificationCard" class="notification hidden">Text Copied!</div>
     <script>
         const backgrounds = [
-            'linear-gradient(to right, #ff512f, #f09819)', // fiery orange
-            'linear-gradient(to right, #ff5f6d, #ffc371)', // sunset orange
-            'linear-gradient(to right, #ff9966, #ff5e62)', // peach red
-            'linear-gradient(to right, #ff7e5f, #feb47b)', // warm pink
-            'linear-gradient(to right, #ff4b1f, #ff9068)', // warm red
-            'linear-gradient(to right, #ee9ca7, #ffdde1)', // light pink
-            'linear-gradient(to right, #f83600, #f9d423)', // neon sun
-            'linear-gradient(to right, #ff416c, #ff4b2b)'  // red sunset
-        ];
+    'linear-gradient(to right, #ff5f6d, #ffc371)', // sunset orange
+    'linear-gradient(to right, #ff9966, #ff5e62)', // peach red
+    'linear-gradient(to right, #ff7e5f, #feb47b)', // warm pink
+    'linear-gradient(to right, #ff4b1f, #ff9068)', // warm red
+    'linear-gradient(to right, #ee9ca7, #ffdde1)', // light pink
+    'linear-gradient(to right, #f83600, #f9d423)', // neon sun
+    'linear-gradient(to right, #ff416c, #ff4b2b)', // red sunset
+    'linear-gradient(to right, #FF9D6C, #BB4E75)', // sunset pink
+    'linear-gradient(to right, #FFD194, #D1913C)', // golden sand
+    'linear-gradient(to right, #FF5F6D, #FFC371)', // roseanna
+    'linear-gradient(to right, #FF7E5F, #FEB47B)', // peach
+    'linear-gradient(to right, #f2709c, #ff9472)', // pinky peach
+    'linear-gradient(to right, #ff9068, #fd746c)', // warm blush
+    'linear-gradient(to right, #e96443, #904e95)', // jShine
+    'linear-gradient(to right, #ff758c, #ff7eb3)', // pink love
+    'linear-gradient(to right, #ff4e50, #f9d423)', // firewatch
+    'linear-gradient(to right, #F1F2B5, #135058)', // kashmir
+    'linear-gradient(to right, #f3904f, #3b4371)',  // horizon
+];
 
         function generateStarter(event) {
             event.stopPropagation();
