@@ -1,2 +1,111 @@
-<h1>The Best Reads According to Jon Jon</h1>
-<h2>My Top 3 Reads of All Time</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Daddy Go</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="generateStarter()">
+    <header>
+        <h1>Ready Daddy Go</h1>
+    </header>
+    <div id="initialContainer" class="container">
+        <p>Click the button below to get a conversation starter!</p>
+        <button onclick="generateStarter(event)">Generate Starter</button>
+    </div>
+    <div id="output" class="output hidden" onclick="copyToClipboard(event)">
+        <p id="conversationStarter"></p>
+        <button onclick="generateStarter(event)">Try Another</button>
+    </div>
+    <div id="notificationCard" class="notification hidden">Text Copied!</div>
+    <script>
+        const backgrounds = [
+            'linear-gradient(to right, #ff512f, #f09819)', // fiery orange
+            'linear-gradient(to right, #ff5f6d, #ffc371)', // sunset orange
+            'linear-gradient(to right, #ff9966, #ff5e62)', // peach red
+            'linear-gradient(to right, #ff7e5f, #feb47b)', // warm pink
+            'linear-gradient(to right, #ff4b1f, #ff9068)', // warm red
+            'linear-gradient(to right, #ee9ca7, #ffdde1)', // light pink
+            'linear-gradient(to right, #f83600, #f9d423)', // neon sun
+            'linear-gradient(to right, #ff416c, #ff4b2b)'  // red sunset
+        ];
+
+        function generateStarter(event) {
+            event.stopPropagation();
+            const starters = [
+                 "What's your favorite local dish that we eat together as a family?",
+    "Remember when we visited the Singapore Zoo? Which animal was your favorite?",
+    "What games do you love playing during recess that you can teach me?",
+    "If we could design a new playground here in Singapore, what features would you want it to have?",
+    "Which do you enjoy more, the Science Centre or the ArtScience Museum, and can you tell me why?",
+    "Which Singapore festival do you enjoy the most with our family and why?",
+    "Can you describe the coolest thing you’ve seen at the National Day Parade?",
+    "If you could be a superhero in Singapore, what special powers would you choose to have?",
+    "Have you ever thought about creating your own Merlion statue with clay or drawings?",
+    "What's the best book you've borrowed from the library that we could read together?",
+    "Which MRT line do we take most often, and where do you like it to take us?",
+    "Have you learned any traditional Singaporean games like chapteh or five stones that you can teach me?",
+    "What do you think is the best part about living in Singapore?",
+    "When we went on the Singapore Flyer, what did you see from the top that excited you the most?",
+    "If you could open a stall at a hawker centre, what kind of food would you want to sell?",
+    "Where is your favorite place in Singapore to celebrate your birthday?",
+    "What’s one new skill you'd like to learn at our Community Club?",
+    "Did you enjoy the Chingay Parade when we saw it together? What was your favorite part?",
+    "What's the funniest thing you’ve ever seen a monkey do in one of our parks?",
+    "If you could plant any tree in your school yard, which type would you choose and why?",
+    "What’s your favorite ice cream flavor from the ice cream uncle’s cart?",
+    "If you could take any animal from the Night Safari home for a day, which one would it be?",
+    "Can you tell me about the most interesting exhibit we saw together at the National Museum?",
+    "Which water park in Singapore do you have the most fun at?",
+    "Have we ever tried any traditional crafts like batik painting together? Would you like to?",
+    "Is there a song you think every kid in Singapore should know?",
+    "If you could make one new rule at school, what would it be and why?",
+    "What do you think about all the cool ships and boats we see at Marina Bay?",
+    "What is the tallest building we’ve been to in Singapore, and what did you like seeing from the top?",
+    "If you could create a new public holiday, what would it be about?",
+    "Which local dessert would you love to learn how to make with me?",
+    "Tell me about your favorite parade at Universal Studios Singapore. What did you like about it?",
+    "Where’s your favorite spot to watch fireworks with us during New Year's Eve?",
+    "Do you like visiting the wet market with me? What do you find interesting there?",
+    "If you could be any character from a local TV show or movie, who would you be and why?",
+    "What’s the best costume you’ve worn on Racial Harmony Day?",
+    "If you could give a tour of our neighborhood, what places would you show me?",
+    "Would you be interested in trying urban farming or gardening at home with me?",
+    "What’s the coolest science experiment you’ve done at school that you can show me?",
+    "If you could set a world record, what would it be for and how would we celebrate it?",
+    "What was the highlight of your day today? Can you share it with me?",
+    "Can you tell me about a book you’re reading right now? What do you like about it?",
+    "Is there a new friend you made this year? What do you like about them?",
+    "Have you faced something challenging at school lately? How did you handle it?",
+    "What’s one thing you did today that you feel proud of?",
+    "Have you come across anything confusing or weird at school that you’d like to talk about?",
+    "What’s your favorite subject this year, and what do you like about it?",
+    "Is there a project or hobby you’d like us to start together this weekend?",
+    "Can you think of a movie you’d like to watch together for our next movie night?",
+    "What kind of stories do you enjoy most, and why?",
+    "Are there any skills or sports you’d like to learn or get better at?",
+    "What’s the coolest thing you’ve learned in school this month?"
+
+            ];
+            const index = Math.floor(Math.random() * starters.length);
+            document.getElementById('conversationStarter').innerText = starters[index];
+            document.getElementById('initialContainer').style.display = 'none';
+            document.getElementById('output').classList.remove('hidden');
+            document.body.style.background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        }
+
+        function copyToClipboard(event) {
+            event.stopPropagation();
+            const text = document.getElementById('conversationStarter').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const notificationCard = document.getElementById('notificationCard');
+                notificationCard.classList.remove('hidden');
+                setTimeout(() => {
+                    notificationCard.classList.add('hidden');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
