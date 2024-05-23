@@ -1,35 +1,38 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f900;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #2d2d2d
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 10px 20px;
     background-color: #ffffff00;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: left; /* Left the logo */
+    align-items: left;
 }
 
-.logo img {
-    height: 50px; /* Adjust size as necessary */
+.logo h1 {
+    font-size: 24px;
+    margin: 0; /* Removes default margin */
+    justify-content: left;
+    padding-left: 20px;
+    color: inherit;
+    background-color: #00000000;
 }
 
 .container {
-    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
     width: 300px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .output {
@@ -40,6 +43,7 @@ header {
     width: 100%;
     padding: 20px;
     text-align: center;
+    background-color: #f4f4f900;
 }
 
 .output.hidden {
@@ -55,8 +59,52 @@ header {
     margin: 0 auto;
     cursor: pointer;
     color: #2d2d2d;
+    background-color: #f4f4f900;
+}
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Take full width to center buttons nicely */
+}
+
+.button-container button {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.button-container button:not(:last-child) {
+    margin-right: 20px; /* Adds spacing between buttons */
+}
+
+#copyButton {
+    background-color: transparent;
+    color: #2d2d2d;
+    border: 3px solid #2d2d2d; /* Thick border for the copy button */
+}
+
+#copyButton:hover {
+    background-color: #2d2d2d; /* Light grey background on hover for the copy button */
+    color: #ffffff;
+}
 button {
     background-color: #45a049;
     color: white;
@@ -88,4 +136,45 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 40px; /* Slightly smaller on mobile devices */
+    }
+
+    #conversationStarter {
+        font-size: 60px; /* Smaller font size for better readability on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 10px; /* Smaller padding for narrower screens */
+    }
+
+    .container, .output {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    #conversationStarter {
+        font-size: 40px; /* Further reduce for very small screens */
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;  /* Optional based on your design needs */
+}
+
+.content {
+    position: relative;
+    z-index: 10; /* Ensures content is above the Lottie background */
+    color: rgba(255, 255, 255, 0); /* Adjust color for visibility against the Lottie background */
+    text-align: center;
+    padding-top: 20%; /* Adjust based on your content's placement needs */
 }
