@@ -1,38 +1,40 @@
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f4f4f900;
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2d2d2d
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f900;
 }
 
 header {
     width: 100%;
     padding: 10px 20px;
     background-color: #ffffff00;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: left; /* Left the logo */
+    justify-content: left;
     align-items: left;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .logo h1 {
-    font-size: 24px;
-    margin: 0; /* Removes default margin */
-    justify-content: left;
+    font-size: 36px !important; /* Ensure the header font size remains 36px */
+    margin: 0;
     padding-left: 20px;
     color: inherit;
-    background-color: #00000000;
+    font-style: italic;
 }
 
 .container {
     padding: 20px;
     padding-top: 20px;
-    width: 300px;
     text-align: center;
+    height: calc(100% - 60px); /* Adjust height considering the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .output {
@@ -60,30 +62,23 @@ header {
     cursor: pointer;
     color: #2d2d2d;
     background-color: #f4f4f900;
-}
-.output {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+    user-select: none; /* Prevent text selection */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Take full width to center buttons nicely */
+    width: 100%;
 }
 
 .button-container button {
-    background-color: #45a049;
-    color: white;
-    border: none;
+    background-color: transparent; /* Change background color to transparent */
+    color: #2d2d2d;
+    border: 3px solid #2d2d2d; /* Add a solid black border */
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold; /* Make the font bold */
     cursor: pointer;
     border-radius: 4px;
     outline: none;
@@ -91,26 +86,51 @@ header {
     margin-top: 20px;
 }
 
-.button-container button:not(:last-child) {
-    margin-right: 20px; /* Adds spacing between buttons */
+.button-container button:hover {
+    background-color: #2d2d2d; /* Change background color on hover */
+    color: #ffffff;
+}
+
+#previousButton {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: 0px solid #2d2d2d;
+    font-weight: bold; /* Make the font bold */
+}
+
+#previousButton:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-weight: bold; /* Make the font bold */
 }
 
 #copyButton {
-    background-color: transparent;
-    color: #2d2d2d;
-    border: 3px solid #2d2d2d; /* Thick border for the copy button */
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold; /* Make the font bold */
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Ensure same margin-top as other buttons */
 }
 
 #copyButton:hover {
-    background-color: #2d2d2d; /* Light grey background on hover for the copy button */
+    background-color: #2d2d2d;
     color: #ffffff;
+    font-weight: bold; /* Make the font bold */
 }
+
 button {
     background-color: #45a049;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold; /* Make the font bold */
     cursor: pointer;
     border-radius: 4px;
     outline: none;
@@ -138,20 +158,40 @@ button:hover {
     display: none;
 }
 
+.click-anywhere-message {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    user-select: none; /* Prevent text selection */
+}
+
+.button-container-fixed {
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Initially hidden */
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .logo h1 {
-        font-size: 40px; /* Slightly smaller on mobile devices */
-    }
-
     #conversationStarter {
-        font-size: 60px; /* Smaller font size for better readability on small screens */
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 15px 10px; /* Smaller padding for narrower screens */
+        padding: 15px 10px;
     }
 
     .container, .output {
@@ -160,21 +200,83 @@ button:hover {
     }
 
     #conversationStarter {
-        font-size: 40px; /* Further reduce for very small screens */
+        font-size: 16px;
     }
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;  /* Optional based on your design needs */
 }
 
 .content {
     position: relative;
-    z-index: 10; /* Ensures content is above the Lottie background */
-    color: rgba(255, 255, 255, 0); /* Adjust color for visibility against the Lottie background */
+    z-index: 10;
+    color: #000;
     text-align: center;
-    padding-top: 20%; /* Adjust based on your content's placement needs */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    font-size: 30px; /* Set font size to 20px */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    user-select: none; /* Prevent text selection */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style for the dismiss button inside the modal */
+#closeModalButton {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s;
+    user-select: none; /* Prevent text selection */
+}
+
+#closeModalButton:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    user-select: none; /* Prevent text selection */
+}
+
+:root {
+    --welcome-message-font-size: 48px; /* Set welcome message font size to 36px */
+}
+
+.welcome-message p {
+    font-style: italic; /* Make the paragraph font italic */
+}
+
+.welcome-message h2 {
+    font-style: normal; /* Reset font style for h2 to normal */
+}
+
+.welcome-message {
+    font-size: var(--welcome-message-font-size); /* Use variable font size */
 }

@@ -3,49 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ready Daddy Go</title>
+    <title>Ready Daddy - Turning Awkward Conversations into Treasured Moments.</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            font-size: 16px; /* Set default text size */
-            background-color: #f4f4f900; /* Background color for the body */
-        }
-        h1 {
-            font-weight: 700; /* Bold font weight for headings */
-        }
-        .hidden {
-            display: none;
-        }
-        .lottie-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
             height: 100%;
-            z-index: -1;
-        }
-        .lottie-background dotlottie-player {
-            width: 100%;
-            height: 100%;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-            color: #000; /* Ensure text is visible on the background */
-        }
-        .container, .output {
-            background: transparent; /* Set background to transparent */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh; /* Full viewport height */
+            transition: background 0.5s ease;
         }
-        .button-container {
-            margin-top: 10px;
+        h1 {
+            font-weight: 700;
+        }
+        .hidden {
+            display: none;
+        }
+        header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #ffffff00;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+        }
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            padding-left: 20px;
+            color: inherit;
+        }
+        .container {
+            padding: 20px;
+            padding-top: 20px;
+            text-align: center;
+            height: calc(100% - 60px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .output-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .output {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f900;
+        }
+        .output.hidden {
+            display: none;
+        }
+        #conversationStarter {
+            font-size: 100px;
+            padding: 20px;
+            width: 100%;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+            margin: 0 auto;
+            cursor: pointer;
+            color: #2d2d2d;
+            background-color: #f4f4f900;
+        }
+        .button-container-fixed {
+            position: fixed;
+            bottom: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none; /* Initially hidden */
+        }
+        .button-container-fixed button {
+            background-color: #45a049;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: var(--button-font-size, 16px); /* Changeable font size */
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button-container-fixed button:not(:last-child) {
+            margin-right: 20px;
+        }
+        #copyButton {
+            background-color: #45a049; /* Ensure the button is always green */
+            color: white;
+            border: none;
+        }
+        #copyButton:hover {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .notification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 20px;
+            }
+            #conversationStarter {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 10px;
+            }
+            .container, .output {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            #conversationStarter {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -56,121 +154,32 @@
     </div>
 </header>
 <div id="initialContainer" class="container">
-    <h3>What shall we talk about today?</h3>
-    <button onclick="generateStarter(event)">Generate Starter</button>
-</div>
-<div id="output" class="output hidden">
-    <p id="conversationStarter"></p>
+    <h2 class="welcome-message">Welcome to Ready Daddy!</h2>
+    <p class="welcome-message"> Turn awkward conversations into treasured moments.</p>
     <div class="button-container">
-        <button id="generateButton" onclick="generateStarter(event)">Try Another</button>
+        <button onclick="generateStarter(event)">Let's Get Started</button>
+    </div>
+</div>
+
+<div class="output-container">
+    <div id="output" class="output hidden">
+        <p id="conversationStarter"></p>
+    </div>
+</div>
+<div class="button-container-fixed">
+    <p class="click-anywhere-message">Click anywhere to generate a new starter.</p>
+    <div class="button-row">
+        <button id="previousButton" onclick="showPreviousStarter(event)">Previous Starter</button>
         <button id="copyButton" onclick="copyToClipboard(event)">Copy to Clipboard</button>
     </div>
 </div>
 <div id="notificationCard" class="notification hidden">Text Copied!</div>
-<div class="lottie-background">
-    <div class="lottie-background">
-        <dotlottie-player 
-            src="https://lottie.host/86ca107c-fc8e-4d0a-9fa1-4ef082057c5c/IT9IMoBOmz.json" 
-            background="transparent" 
-            speed="1" 
-            loop 
-            autoplay>
-        </dotlottie-player>
+<div id="notificationModal" class="modal hidden">
+    <div class="modal-content">
+        <p id="notificationMessage"></p>
+        <button id="closeModalButton" onclick="closeNotification()">Dismiss</button>
     </div>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-
-<script>
-    const starters = [
-        "What's your favorite local dish that we eat together as a family?",
-        "Remember when we visited the Singapore Zoo? Which animal was your favorite?",
-        "What games do you love playing during recess that you can teach me?",
-        "If we could design a new playground here in Singapore, what features would you want it to have?",
-        "Which do you enjoy more, the Science Centre or the ArtScience Museum, and can you tell me why?",
-        "Which Singapore festival do you enjoy the most with our family and why?",
-        "Can you describe the coolest thing you’ve seen at the National Day Parade?",
-        "If you could be a superhero in Singapore, what special powers would you choose to have?",
-        "What's the best book you've borrowed from the library that we could read together?",
-        "Which MRT line do we take most often, and where do you like it to take us?",
-        "Have you learned any traditional Singaporean games like chapteh or five stones that you can teach me?",
-        "What do you think is the best part about living in Singapore?",
-        "When we went on the Singapore Flyer, what did you see from the top that excited you the most?",
-        "If you could open a stall at a hawker centre, what kind of food would you want to sell?",
-        "Where is your favorite place in Singapore to celebrate your birthday?",
-        "What’s one new skill you'd like to learn?",
-        "If you could plant any tree in your school garden, which type would you choose and why?",
-        "What’s your favorite ice cream flavor from the ice cream uncle?",
-        "If you could take any animal from the Night Safari home for a day, which one would it be?",
-        "Can you tell me about the most interesting thing you learned this week?",
-        "Which water park in Singapore do you have the most fun at?",
-        "Have we ever tried any traditional crafts like batik painting together? Would you like to?",
-        "Is there a song you think every kid in Singapore should know?",
-        "If you could make one new rule at school, what would it be and why?",
-        "What do you think about all the cool ships and boats we see at Marina Bay?",
-        "What is the tallest building we’ve been to in Singapore, and what did you like seeing from the top?",
-        "If you could create a new public holiday, what would it be about?",
-        "Which local dessert would you love to learn how to make with me?",
-        "Tell me about your favorite parade at Universal Studios Singapore. What did you like about it?",
-        "Where’s your favorite spot to watch fireworks with us during New Year's Eve?",
-        "Do you like visiting the wet market with me? What do you find interesting there?",
-        "If you could be any character from a local TV show or movie, who would you be and why?",
-        "What’s the best costume you’ve worn on Racial Harmony Day?",
-        "If you could give a tour of our neighborhood, what places would you show me?",
-        "Would you be interested in trying urban farming or gardening at home with me?",
-        "What’s the coolest science experiment you’ve done at school that you can show me?",
-        "If you could set a world record, what would it be for and how would we celebrate it?",
-        "What was the highlight of your day today? Can you share it with me?",
-        "Can you tell me about a book you’re reading right now? What do you like about it?",
-        "Is there a new friend you made this year? What do you like about them?",
-        "Have you faced something challenging at school lately? How did you handle it?",
-        "What’s one thing you did today that you feel proud of?",
-        "Have you come across anything confusing or weird at school that you’d like to talk about?",
-        "What’s your favorite subject this year, and what do you like about it?",
-        "Is there a project or hobby you’d like us to start together this weekend?",
-        "Can you think of a movie you’d like to watch together for our next movie night?",
-        "What kind of stories do you enjoy most, and why?",
-        "Are there any skills or sports you’d like to learn or get better at?",
-        "What’s the coolest thing you’ve learned in school this month?",
-        "Which side of history do you want us to be on?",
-        "What do you think you want to be when you grow up, and why?",
-        "What is something kind that you saw someone do recently?",
-        "If you could go anywhere on a school field trip, where would you choose and why?",
-        "What is one rule at home or school you would change if you could, and what would you change it to?",
-        // Additional conversation starters...
-    ];
-
-    function generateStarter(event) {
-        if (event) {
-            event.stopPropagation(); // Prevent event from bubbling to body
-        }
-        const index = Math.floor(Math.random() * starters.length);
-        document.getElementById('conversationStarter').innerText = starters[index];
-        document.getElementById('initialContainer').style.display = 'none';
-        document.getElementById('output').classList.remove('hidden');
-    }
-
-    function copyToClipboard(event) {
-        event.stopPropagation(); // Prevent event from bubbling to body
-        const textToCopy = document.getElementById('conversationStarter').innerText;
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            showNotification("Text Copied!");
-        }).catch(err => {
-            showNotification("Failed to copy text");
-            console.error("Failed to copy text: ", err);
-        });
-    }
-
-    function showNotification(message) {
-        const notificationCard = document.getElementById('notificationCard');
-        notificationCard.textContent = message;
-        notificationCard.classList.remove('hidden');
-        setTimeout(() => {
-            notificationCard.classList.add('hidden');
-        }, 2000);
-    }
-
-    document.body.addEventListener('click', function() {
-        generateStarter();
-    });
-</script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
