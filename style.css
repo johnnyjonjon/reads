@@ -280,36 +280,3 @@ button:hover {
 .welcome-message {
     font-size: var(--welcome-message-font-size); /* Use variable font size */
 }
-
-.initial-image {
-    width: 100%;
-    height: auto;
-    max-width: 100px; /* Adjust the maximum width as needed */
-    display: block;
-    margin: 0 auto 20px auto; /* Center the image and add margin */
-}
-
-footer {
-    background-color: transparent;
-    padding: 5px;
-    text-align: left;
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 5px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-footer a {
-    color: #2d2d2d;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
