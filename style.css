@@ -280,33 +280,3 @@ button:hover {
 .welcome-message {
     font-size: var(--welcome-message-font-size); /* Use variable font size */
 }
-
-footer {
-    background-color: transparent;
-    padding: 0 15px;
-    text-align: left;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 10px; /* Existing footer styles */
-}
-
-#legalDisclaimer-container {
-    text-align: left; /* Align the text to the left */
-    padding-left: 10px; /* Add some padding on top for spacing */
-    padding-right: 10px;
-}
-
-.legalDisclaimer {
-    margin-top: 0; /* Removes top margin from h5 and p for tighter grouping */
-}
-
-.legalDisclaimer h3 {
-    font-size: 14px; /* Slightly larger font for the disclaimer title */
-    font-weight: bold;
-}
-
-.legalDisclaimer p {
-    font-size: 12px; /* Ensures consistency in font size */
-}
-
