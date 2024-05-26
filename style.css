@@ -288,7 +288,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 12px; /* Existing footer styles */
+    font-size: 8px; /* Existing footer styles */
 }
 
 #legalDisclaimer-container {
