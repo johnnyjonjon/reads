@@ -9,7 +9,7 @@
     <style>
         .about-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             text-align: center;
             background-color: #ffffff;
@@ -29,6 +29,35 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 85px; /* Padding between header and container */
+        }
+
+        .button-container {
+            margin-top: 10px; /* Space above the button */
+        }
+
+        .button-container button {
+            background-color: #45a049;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
