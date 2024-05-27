@@ -26,19 +26,36 @@
         .hidden {
             display: none;
         }
-        header {
+        nav {
             width: 100%;
             padding: 10px 20px;
             background-color: #ffffff00;
             display: flex;
-            align-items: left;
-            padding-right: 20px;
+            justify-content: space-between;
+            align-items: center;
         }
-        .logo h1 {
-            font-size: 24px;
-            margin: 0;
-            padding-left: 20px;
-            color: inherit;
+        .logo img {
+            height: 40px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links button {
+            background-color: #ffffff;
+            color: #2d2d2d;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s;
+            margin-left: 20px;
+        }
+        .nav-links button:hover {
+            background-color: #2d2d2d;
+            color: #ffffff;
         }
         .container {
             padding: 20px;
@@ -129,11 +146,14 @@
     </style>
 </head>
 <body>
-    <header>
+    <nav>
         <div class="logo">
             <img src="https://ucarecdn.com/d3b14ca5-ba26-47ed-91c3-511dee883c51/readydaddylogo.png" alt="Ready Daddy Logo">
         </div>
-    </header>
+        <div class="nav-links">
+            <button id="aboutButton" onclick="window.location.href='about.html'">About</button>
+        </div>
+    </nav>
     <div id="initialContainer" class="container">
         <h2 class="welcome-message">Welcome to Ready Daddy!</h2>
         <p class="welcome-message">Turn awkward conversations into treasured moments.</p>
