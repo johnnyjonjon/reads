@@ -315,11 +315,12 @@ button:hover {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    position: relative;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
 }
 
 .close {
@@ -334,4 +335,23 @@ button:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#showSlidesButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #2d2d2d;
+    border: 0px solid #2d2d2d;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    z-index: 1000;
+}
+
+#showSlidesButton:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
 }
