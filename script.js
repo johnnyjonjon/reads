@@ -80,7 +80,7 @@ function showPreviousStarter(event) {
         // Set the previous starter text
         document.getElementById('conversationStarter').innerText = currentStarter;
     } else {
-        showMoveOn("You gotta move on in order to keep the conversation going.");
+        showMoveOn("You gotta keep moving forward in order to keep the conversation going.");
     }
 }
 
