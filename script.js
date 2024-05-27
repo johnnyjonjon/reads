@@ -34,64 +34,32 @@ const conversationStarters = [
     // Additional conversation starters...
 ];
 
-// Array of background gradients to apply randomly
-const gradients = [
-    "linear-gradient(45deg, #FFD194, #FFE7B2)", // Golden Hour
-    "linear-gradient(45deg, #FFECB3, #FFE0B2)", // Light Apricot
-    "linear-gradient(45deg, #FFD700, #FFEB3B)", // Bright Gold
-    "linear-gradient(45deg, #FFEEAD, #FFCC66)", // Lemon Meringue
-    "linear-gradient(45deg, #FFF3B0, #FFE9A8)", // Buttercream
-    "linear-gradient(45deg, #FFE259, #FFA751)", // Sunny Delight
-    "linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC)", // Warm Sunset
-    "linear-gradient(45deg, #FAD0C4, #FFD1FF)", // Soft Peach
-    "linear-gradient(45deg, #FBD3E9, #FFCAD4)", // Rosy Pink
-    "linear-gradient(45deg, #FFC3A0, #FFAFBD)", // Peachy Dream
-    "linear-gradient(45deg, #FFE7A1, #FFC55C)", // Honey Glow
-    "linear-gradient(45deg, #FFAA85, #FFB76B)", // Sunset Glow
-    "linear-gradient(45deg, #FFB1B0, #FFC6C7)", // Pastel Coral
-    "linear-gradient(45deg, #FFDEB3, #FFF1C1)", // Soft Banana
-    "linear-gradient(45deg, #FFEAB7, #FFCB9A)" // Autumn Blush
-];
-
-
-
 // Variables to keep track of the current starter and history
 let currentStarter = "";
-let currentGradient = "";
 const starterHistory = [];
-const gradientHistory = [];
 
 function generateStarter(event) {
     event.stopPropagation();
 
-    // Ensure the next starter and gradient are different from the current one
+    // Ensure the next starter is different from the current one
     let newStarterIndex;
-    let newGradientIndex;
     do {
         newStarterIndex = Math.floor(Math.random() * conversationStarters.length);
     } while (conversationStarters[newStarterIndex] === currentStarter);
 
-    do {
-        newGradientIndex = Math.floor(Math.random() * gradients.length);
-    } while (gradients[newGradientIndex] === currentGradient);
-
-    // Update the current starter and gradient
+    // Update the current starter
     currentStarter = conversationStarters[newStarterIndex];
-    currentGradient = gradients[newGradientIndex];
 
-    // Add the current starter and gradient to the history
+    // Add the current starter to the history
     starterHistory.push(currentStarter);
-    gradientHistory.push(currentGradient);
 
     // Keep the history length up to 5
     if (starterHistory.length > 5) {
         starterHistory.shift();
-        gradientHistory.shift();
     }
 
-    // Set the selected starter text and background gradient
+    // Set the selected starter text
     document.getElementById('conversationStarter').innerText = currentStarter;
-    document.body.style.background = currentGradient;
 
     // Hide the initial container and show the output container
     document.getElementById('initialContainer').style.display = 'none';
@@ -103,17 +71,14 @@ function showPreviousStarter(event) {
     event.stopPropagation();
 
     if (starterHistory.length > 1) {
-        // Remove the current starter and gradient from history
+        // Remove the current starter from history
         starterHistory.pop();
-        gradientHistory.pop();
 
-        // Get the previous starter and gradient
+        // Get the previous starter
         currentStarter = starterHistory[starterHistory.length - 1];
-        currentGradient = gradientHistory[gradientHistory.length - 1];
 
-        // Set the previous starter text and background gradient
+        // Set the previous starter text
         document.getElementById('conversationStarter').innerText = currentStarter;
-        document.body.style.background = currentGradient;
     } else {
         showMoveOn("You gotta move on in order to keep the conversation going.");
     }
@@ -162,14 +127,6 @@ function closeModalOnClickOutside(event) {
     if (event.target === document.getElementById('notificationModal')) {
         closeNotification();
     }
-}
-
-function closeNotification() {
-    const notificationModal = document.getElementById('notificationModal');
-    notificationModal.classList.add('hidden');
-    setTimeout(() => {
-        notificationModal.style.display = 'none';
-    }, 300); // Delay to ensure transition completion
 }
 
 // Add event listener to close modal when clicking outside of it
