@@ -282,7 +282,7 @@ button:hover {
 }
 #showSlidesButton {
     position: fixed;
-    top: 0px; /* Adjust as needed */
+    top: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
     background-color: transparent;
     color: #2d2d2d;
@@ -298,60 +298,4 @@ button:hover {
     background-color: #2d2d2d;
     color: #ffffff;
     user-select: none; /* Prevent text selection */
-}
-
-/* CSS for Modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#showSlidesButton {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    color: #2d2d2d;
-    border: 0px solid #2d2d2d;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    z-index: 1000;
-}
-
-#showSlidesButton:hover {
-    background-color: #2d2d2d;
-    color: #ffffff;
 }
