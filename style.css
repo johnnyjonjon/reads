@@ -26,7 +26,30 @@ header {
     color: inherit;
     font-style: italic;
 }
+.button-about {
+    position: absolute;
+    top: 5px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    padding-right: 20px;
+}
 
+.button-about button {
+    background-color: transparent;
+    color: #2d2d2d;
+    border: 3px solid #2d2d2d; /* Black outline */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.button-about button:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    user-select: none; /* Prevent text selection */
+}
 .container {
     padding: 20px;
     padding-top: 20px;
