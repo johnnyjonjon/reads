@@ -192,3 +192,26 @@ function setBackgroundGradient() {
 
 // Call setBackgroundGradient when the DOM content is loaded
 document.addEventListener('DOMContentLoaded', setBackgroundGradient);
+
+// JavaScript for Modal Functionality
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+// Open the modal when the button is clicked
+document.getElementById('showSlidesButton').addEventListener('click', function() {
+    modal.style.display = "block";
+    var iframe = document.getElementById('googleSlidesIframe');
+    iframe.src = "https://docs.google.com/presentation/d/e/2PACX-1vTxic4cNcUfIClGWB4IuSrqIG7grxfExeVY7MdEecWuqrVRU7VUMMI__3sa_APWS3OFbUAViZJerOfd/embed?start=false&loop=false&delayms=3000";
+});
+
+// Close the modal when the close button is clicked
+span.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};

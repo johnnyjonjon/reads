@@ -92,9 +92,9 @@ header {
 }
 
 #previousButton {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    border: 0px solid #2d2d2d;
+    background-color: transparent;
+    color: #2d2d2d;
+    border: 3px solid #2d2d2d;
     font-weight: bold; /* Make the font bold */
 }
 
@@ -279,4 +279,59 @@ button:hover {
 
 .welcome-message {
     font-size: var(--welcome-message-font-size); /* Use variable font size */
+}
+#showSlidesButton {
+    position: fixed;
+    top: 0px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: transparent;
+    color: #2d2d2d;
+    border: 3px solid #2d2d2d; /* Black outline */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#showSlidesButton:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    user-select: none; /* Prevent text selection */
+}
+
+/* CSS for Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
