@@ -20,7 +20,8 @@ header {
 }
 
 .logo img {
-    height: 100px; /* Adjust the height as needed */
+    width: auto;
+    height: 40px; /* Adjust the height as needed */
     margin: 0;
     padding-left: 20px;
 }
