@@ -45,7 +45,26 @@ const gradients = [
     "linear-gradient(45deg, #fbc2eb, #a6c1ee)",
     "linear-gradient(45deg, #a1c4fd, #c2e9fb)",
     "linear-gradient(45deg, #d4fc79, #96e6a1)",
-    "linear-gradient(45deg, #84fab0, #8fd3f4)"
+    "linear-gradient(45deg, #84fab0, #8fd3f4)",
+    "linear-gradient(45deg, #FFDEE9, #B5FFFC)",
+    "linear-gradient(45deg, #FBC2EB, #A6C1EE)",
+    "linear-gradient(45deg, #FFEEAD, #FFCACD)",
+    "linear-gradient(45deg, #FBD3E9, #BB377D)",
+    "linear-gradient(45deg, #FDCB82, #FF6F91)",
+    "linear-gradient(45deg, #A1FFCE, #FAFFD1)",
+    "linear-gradient(45deg, #FDCBF1, #FCF6BD)",
+    "linear-gradient(45deg, #E0C3FC, #8EC5FC)",
+    "linear-gradient(45deg, #FF9A9E, #FAD0C4)",
+    "linear-gradient(45deg, #FFC3A0, #FFAFBD)",
+    "linear-gradient(45deg, #C2FFD8, #465EFB)",
+    "linear-gradient(45deg, #FFE29F, #FFA99F)",
+    "linear-gradient(45deg, #FF6FD8, #3813C2)",
+    "linear-gradient(45deg, #A18CD1, #FBC2EB)",
+    "linear-gradient(45deg, #FF6FD8, #FFE29F)",
+    "linear-gradient(45deg, #FDCBF1, #A1FFCE)",
+    "linear-gradient(45deg, #FDCB82, #FFC3A0)",
+    "linear-gradient(45deg, #FCF6BD, #FFF5E1)",
+    "linear-gradient(45deg, #FFE29F, #A6C1EE)"
 ];
 
 

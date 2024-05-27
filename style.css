@@ -12,8 +12,8 @@ header {
     padding: 10px 20px;
     background-color: #ffffff00;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: space-between; /* Space out logo and button */
+    align-items: center;
     position: fixed; /* Make the header fixed */
     top: 0; /* Position it at the top */
     z-index: 1000; /* Ensure it stays above other content */
@@ -25,51 +25,79 @@ header {
     margin: 0;
     padding-left: 20px;
 }
+
 .button-about {
-    position: absolute;
-    top: 0px; /* Adjust as needed */
-    right: 60px; /* Adjust as needed */
     padding-right: 20px;
 }
 
-.button-about button {
+.button-about button,
+.styled-button,
+.button-container button {
     background-color: transparent;
     color: #2d2d2d;
     border: 3px solid #2d2d2d; /* Black outline */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 4px;
     outline: none;
     transition: background-color 0.3s, color 0.3s;
     z-index: 1000; /* Ensure it's above other content */
 }
 
-.button-about button:hover {
+.button-about button:hover,
+.styled-button:hover,
+.button-container button:hover {
     background-color: #2d2d2d;
     color: #ffffff;
     user-select: none; /* Prevent text selection */
 }
 
-.styled-button {
+.button-container button {
+    font-size: 20px;
+    font-weight: bold; /* Make the font bold */
+    margin-top: 20px;
+}
+
+#previousButton {
+    font-weight: bold; /* Make the font bold */
+}
+
+#copyButton {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold; /* Make the font bold */
+    margin-top: 20px; /* Ensure same margin-top as other buttons */
+}
+
+#copyButton:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-weight: bold; /* Make the font bold */
+}
+
+button {
     background-color: #45a049;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold; /* Make the font bold */
     cursor: pointer;
     border-radius: 4px;
     outline: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
-.styled-button:hover {
+button:hover {
     background-color: #2d2d2d;
-    color: #ffffff;
-    user-select: none; /* Prevent text selection */
 }
+
 .container {
     padding: 20px;
-    padding-top: 20px;
     text-align: center;
     height: calc(100% - 60px); /* Adjust height considering the header */
     display: flex;
@@ -103,83 +131,6 @@ header {
     color: #2d2d2d;
     background-color: #f4f4f900;
     user-select: none; /* Prevent text selection */
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.button-container button {
-    background-color: transparent; /* Change background color to transparent */
-    color: #2d2d2d;
-    border: 3px solid #2d2d2d; /* Add a solid black border */
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold; /* Make the font bold */
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-.button-container button:hover {
-    background-color: #2d2d2d; /* Change background color on hover */
-    color: #ffffff;
-}
-
-#previousButton {
-    background-color: transparent;
-    color: #2d2d2d;
-    border: 3px solid #2d2d2d;
-    font-weight: bold; /* Make the font bold */
-}
-
-#previousButton:hover {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    font-weight: bold; /* Make the font bold */
-}
-
-#copyButton {
-    background-color: #45a049;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold; /* Make the font bold */
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s;
-    margin-top: 20px; /* Ensure same margin-top as other buttons */
-}
-
-#copyButton:hover {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    font-weight: bold; /* Make the font bold */
-}
-
-button {
-    background-color: #45a049;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold; /* Make the font bold */
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #45a049;
 }
 
 .notification {
@@ -224,6 +175,10 @@ button:hover {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    .logo img {
+        height: 30px;
+    }
+
     #conversationStarter {
         font-size: 20px;
     }
@@ -244,17 +199,6 @@ button:hover {
     }
 }
 
-.content {
-    position: relative;
-    z-index: 10;
-    color: #000;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -271,7 +215,7 @@ button:hover {
 
 .modal-content {
     background-color: #fefefe;
-    font-size: 30px; /* Set font size to 20px */
+    font-size: 30px; /* Set font size to 30px */
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -279,10 +223,6 @@ button:hover {
     max-width: 500px;
     text-align: center;
     user-select: none; /* Prevent text selection */
-}
-
-.hidden {
-    display: none;
 }
 
 /* Style for the dismiss button inside the modal */
@@ -306,7 +246,7 @@ button:hover {
 }
 
 :root {
-    --welcome-message-font-size: 48px; /* Set welcome message font size to 36px */
+    --welcome-message-font-size: 48px; /* Set welcome message font size to 48px */
 }
 
 .welcome-message p {
@@ -320,6 +260,7 @@ button:hover {
 .welcome-message {
     font-size: var(--welcome-message-font-size); /* Use variable font size */
 }
+
 #showSlidesButton {
     position: fixed;
     top: 20px; /* Adjust as needed */
