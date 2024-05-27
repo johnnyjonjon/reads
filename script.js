@@ -36,21 +36,21 @@ const conversationStarters = [
 
 // Array of background gradients to apply randomly
 const gradients = [
+    "linear-gradient(45deg, #FFD194, #FFE7B2)", // Golden Hour
+    "linear-gradient(45deg, #FFECB3, #FFE0B2)", // Light Apricot
+    "linear-gradient(45deg, #FFD700, #FFEB3B)", // Bright Gold
+    "linear-gradient(45deg, #FFEEAD, #FFCC66)", // Lemon Meringue
+    "linear-gradient(45deg, #FFF3B0, #FFE9A8)", // Buttercream
+    "linear-gradient(45deg, #FFE259, #FFA751)", // Sunny Delight
     "linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC)", // Warm Sunset
     "linear-gradient(45deg, #FAD0C4, #FFD1FF)", // Soft Peach
-    "linear-gradient(45deg, #a1c4fd, #c2e9fb)", // Cool Sky
-    "linear-gradient(45deg, #d4fc79, #96e6a1)", // Fresh Lime
-    "linear-gradient(45deg, #84fab0, #8fd3f4)", // Minty Breeze
-    "linear-gradient(45deg, #FBD3E9, #BB377D)", // Rosy Pink
+    "linear-gradient(45deg, #FBD3E9, #FFCAD4)", // Rosy Pink
     "linear-gradient(45deg, #FFC3A0, #FFAFBD)", // Peachy Dream
-    "linear-gradient(45deg, #FF6B6B, #556270)", // Coral Reef
-    "linear-gradient(45deg, #FFD194, #D1913C)", // Golden Hour
-    "linear-gradient(45deg, #FF6F61, #DE6262)", // Warm Ember
-    "linear-gradient(45deg, #614385, #516395)", // Twilight Glow
-    "linear-gradient(45deg, #F2994A, #F2C94C)", // Golden Peach
-    "linear-gradient(45deg, #3498DB, #2ECC71)", // Aqua Splash
-    "linear-gradient(45deg, #DCE35B, #45B649)", // Citrus Green
-    "linear-gradient(45deg, #74EBD5, #9FACE6)", // Misty Blue    
+    "linear-gradient(45deg, #FFE7A1, #FFC55C)", // Honey Glow
+    "linear-gradient(45deg, #FFAA85, #FFB76B)", // Sunset Glow
+    "linear-gradient(45deg, #FFB1B0, #FFC6C7)", // Pastel Coral
+    "linear-gradient(45deg, #FFDEB3, #FFF1C1)", // Soft Banana
+    "linear-gradient(45deg, #FFEAB7, #FFCB9A)" // Autumn Blush
 ];
 
 

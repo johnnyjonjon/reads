@@ -5,6 +5,7 @@ body, html {
     overflow: hidden;
     font-family: 'Lato', sans-serif;
     background-color: #f4f4f900;
+    user-select: none; /* Prevent text selection for the entire body */
 }
 
 header {
@@ -24,22 +25,6 @@ header {
     height: 40px;
     margin: 0;
     padding-left: 40px;
-}
-
-.link-about a {
-    color: #2d2d2d;
-    text-decoration: none;
-    font-size: 16px;
-    border: 3px solid #2d2d2d;
-    padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px;
-    padding-right:40px
-}
-
-.link-about a:hover {
-    background-color: #2d2d2d;
-    color: #ffffff;
 }
 
 .button-container button {
@@ -112,32 +97,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .logo img {
-        height: 30px;
-    }
-
-    #conversationStarter {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 10px;
-    }
-
-    .container, .output {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    #conversationStarter {
-        font-size: 16px;
-    }
 }
 
 .modal {
