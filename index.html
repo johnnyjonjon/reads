@@ -35,7 +35,7 @@
             align-items: center;
         }
         .logo img {
-            height: 40px;
+            height: 100px;
         }
         .nav-links {
             display: flex;
@@ -46,12 +46,13 @@
             color: #2d2d2d;
             border: none;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 4px;
             outline: none;
             transition: background-color 0.3s, color 0.3s;
             margin-left: 20px;
+            margin-right:20px
         }
         .nav-links button:hover {
             background-color: #2d2d2d;
@@ -83,7 +84,9 @@
         }
         #conversationStarter {
             font-size: 100px;
-            padding: 20px;
+            padding-top: -120px;
+            margin-bottom: 0px;
+            padding-bottom: 100px;
             width: 100%;
             overflow-wrap: break-word;
             box-sizing: border-box;
@@ -96,6 +99,7 @@
             position: fixed;
             bottom: 10%;
             width: 100%;
+            margin-top: -200px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -158,7 +162,6 @@
         <h2 class="welcome-message">Welcome to Ready Daddy!</h2>
         <p class="welcome-message">Turn awkward conversations into treasured moments.</p>
         <div class="button-container">
-            <button id="aboutButton" onclick="window.location.href='about.html'">About</button>
             <button class="styled-button" onclick="generateStarter(event)">Let's Get Started</button>
         </div>
     </div>
