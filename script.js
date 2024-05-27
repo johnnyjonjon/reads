@@ -43,10 +43,8 @@ const gradients = [
     "linear-gradient(45deg, #84fab0, #8fd3f4)", // Minty Breeze
     "linear-gradient(45deg, #FBD3E9, #BB377D)", // Rosy Pink
     "linear-gradient(45deg, #FFC3A0, #FFAFBD)", // Peachy Dream
-    "linear-gradient(45deg, #C2FFD8, #465EFB)", // Ocean Green
     "linear-gradient(45deg, #FF6B6B, #556270)", // Coral Reef
     "linear-gradient(45deg, #FFD194, #D1913C)", // Golden Hour
-    "linear-gradient(45deg, #22C1C3, #FDBB2D)", // Tropical Teal
     "linear-gradient(45deg, #FF4E50, #F9D423)", // Candy Corn
     "linear-gradient(45deg, #FF6F61, #DE6262)", // Warm Ember
     "linear-gradient(45deg, #614385, #516395)", // Twilight Glow
