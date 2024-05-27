@@ -49,6 +49,24 @@ header {
     color: #ffffff;
     user-select: none; /* Prevent text selection */
 }
+
+.styled-button {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    user-select: none; /* Prevent text selection */
+}
 .container {
     padding: 20px;
     padding-top: 20px;
