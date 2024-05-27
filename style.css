@@ -26,31 +26,19 @@ header {
     padding-left: 20px;
 }
 
-.button-about {
-    padding-right: 20px;
-}
-
-.button-about button,
-.styled-button,
-.button-container button {
-    background-color: #2d2d2d;
-    color: whitw;
-    border: 0px solid #2d2d2d; /* Black outline */
-    padding: 10px 20px;
+.link-about a {
+    color: #2d2d2d;
+    text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
+    border: 3px solid #2d2d2d; /* Black outline */
+    padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
-    z-index: 1000; /* Ensure it's above other content */
+    border-radius: 4px;
 }
 
-.button-about button:hover,
-.styled-button:hover,
-.button-container button:hover {
+.link-about a:hover {
     background-color: #2d2d2d;
     color: #ffffff;
-    user-select: none; /* Prevent text selection */
 }
 
 .button-container button {

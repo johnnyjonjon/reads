@@ -38,18 +38,15 @@ const conversationStarters = [
 const gradients = [
     "linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC)", // Warm Sunset
     "linear-gradient(45deg, #FAD0C4, #FFD1FF)", // Soft Peach
-    "linear-gradient(45deg, #a18cd1, #fbc2eb)", // Lavender Bliss
     "linear-gradient(45deg, #a1c4fd, #c2e9fb)", // Cool Sky
     "linear-gradient(45deg, #d4fc79, #96e6a1)", // Fresh Lime
     "linear-gradient(45deg, #84fab0, #8fd3f4)", // Minty Breeze
     "linear-gradient(45deg, #FBD3E9, #BB377D)", // Rosy Pink
     "linear-gradient(45deg, #FFC3A0, #FFAFBD)", // Peachy Dream
     "linear-gradient(45deg, #C2FFD8, #465EFB)", // Ocean Green
-    "linear-gradient(45deg, #FF6FD8, #3813C2)", // Purple Haze
     "linear-gradient(45deg, #FF6B6B, #556270)", // Coral Reef
     "linear-gradient(45deg, #FFD194, #D1913C)", // Golden Hour
     "linear-gradient(45deg, #FF512F, #DD2476)", // Fiery Sunset
-    "linear-gradient(45deg, #DA22FF, #9733EE)", // Electric Violet
     "linear-gradient(45deg, #FFB75E, #ED8F03)", // Tangerine Dream
     "linear-gradient(45deg, #22C1C3, #FDBB2D)", // Tropical Teal
     "linear-gradient(45deg, #FF4E50, #F9D423)", // Candy Corn
@@ -64,7 +61,6 @@ const gradients = [
     "linear-gradient(45deg, #EF3B36, #FFFFFF)", // Scarlet Ice
     "linear-gradient(45deg, #00C9FF, #92FE9D)", // Blue Lagoon
     "linear-gradient(45deg, #00F260, #0575E6)", // Green Ocean
-    "linear-gradient(45deg, #FC466B, #3F5EFB)", // Raging Purple
     "linear-gradient(45deg, #74EBD5, #9FACE6)", // Misty Blue    
 ];
 
