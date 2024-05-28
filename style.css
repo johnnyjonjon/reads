@@ -71,6 +71,7 @@ nav {
     padding: 10px 10px;
     border-radius: 5px;
 }
+
 /* Styling for the header to center it on the screen */
 header {
     display: flex;
@@ -153,19 +154,6 @@ header {
 .tab-button:hover {
     background-color: transparent; /* No hover effect */
     color: #7d3cff;
-}
-
-/* Optional: To visually indicate which tab is active by animating the background color */
-.tab-container::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #7d3cff;
-    transition: 0.1s linear;
 }
 
 .output-container {
@@ -364,7 +352,6 @@ header {
     display: none;
 }
 
-
 .notification {
     position: fixed;
     top: 10px;
@@ -389,7 +376,6 @@ header {
     opacity: 0;
     display: none; /* Ensure it's hidden after transition */
 }
-
 
 footer {
     background-color: #fff;
