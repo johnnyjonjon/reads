@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Daddy - Turning Awkward Conversations into Treasured Moments.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27MNZD20Y9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27MNZD20Y9');
+</script>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">
+                <img src="https://ucarecdn.com/d3b14ca5-ba26-47ed-91c3-511dee883c51/readydaddylogo.png" alt="Ready Daddy Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="tips.html">Tips for Meaningful Conversations</a></li>
+            <li><a href="starters.html">Try</a></li>
+        </ul>
+    </nav>    
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <h2>Be Here Now 👇</h2>
+                    <p>First things first: put down your gadgets, switch off your screens, and actually be present. Imagine you’re an ancient sage in a serene garden, free from the tyranny of notifications. Look the other person in the eye and listen, not just with your ears, but with your entire being. Don’t just hear their words; feel their soul.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Ask the Right Questions ❓</h2>
+                    <p>Ah, questions. They’re like keys to hidden treasures. Instead of the usual "How are you?" which typically garners a "Good" or "Fine," try asking something that provokes thought. "What’s the most interesting thing that happened to you today?" or "What’s a book that changed your life?" These questions open doors to stories, and stories are where the magic happens.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Pick Your Moment ⏳</h2>
+                    <p>Timing, my dear reader, is everything. You wouldn’t propose marriage in the middle of a hurricane, would you? Choose moments when your conversation partner is relaxed and receptive. Perhaps during a quiet dinner, a leisurely walk, or while gazing at the stars. Avoid the pitfalls of engaging someone who’s preoccupied, stressed, or hangry. Yes, hangry—hungry and angry. It’s a real thing.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Speak Their Language 🗣️</h2>
+                    <p>Communication is more than just words; it’s about connection. Tailor your language to the person you’re speaking with. For children, this means simple, vivid descriptions. For adults, clarity and empathy are key. Don’t drown them in jargon or convoluted explanations. Speak plainly, like a wise old fisherman telling tales of the sea.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Share and Care 🤗</h2>
+                    <p>Here’s a secret: people love stories. Share your own experiences, no matter how mundane they may seem to you. Talk about the time you got lost in a foreign city or how you once tried to bake a cake and ended up with a kitchen full of smoke. These snippets of your life make you relatable and human. They invite others to open up and share their own tales, creating a beautiful tapestry of shared experiences.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Listen Like You Mean It 🧏🏻‍♀️</h2>
+                    <p>Listening is an art, and like all art, it requires practice. Don’t interrupt, don’t judge, and for heaven’s sake, don’t finish their sentences. Let them speak. Nod, smile, and use encouraging sounds like "Mmm" and "Ah." This isn’t just polite; it shows that you’re genuinely engaged. And who knows? You might learn something new or see the world from a different perspective.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <h2>Engage the Senses 🖐🏽</h2>
+                    <p>Involve all senses in your conversation. Notice the twinkle in their eye, the warmth of their voice, the scent of their perfume, or the rhythm of their gestures. This sensory engagement enriches the experience, making the conversation more memorable and impactful.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+</div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h3>Every conversation matters.</h3>
+                <p>© 2024 All Rights Reserved, The Joget Company.</p>
+            </div>
+            <div class="footer-support">
+                <h3>Support</h3>
+                <p>Have questions to ask or share? <a href="mailto:jonjohnnyjon@outlook.com">Get in touch!</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="https://www.instagram.com/jonjohnnyjon/?hl=en"><i class="fab fa-instagram"></i>@jonjohnnyjon</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+            const innerCarousel = document.querySelector('.carousel-inner');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                innerCarousel.style.transform = `translateX(${offset}%)`;
+
+                if (currentIndex === totalSlides) {
+                    setTimeout(() => {
+                        innerCarousel.style.transition = 'none';
+                        currentIndex = 0;
+                        innerCarousel.style.transform = `translateX(0%)`;
+                        setTimeout(() => {
+                            innerCarousel.style.transition = 'transform 0.5s ease';
+                        }, 0);
+                    }, 500);
+                }
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            document.querySelector('.next').addEventListener('click', nextSlide);
+            document.querySelector('.prev').addEventListener('click', prevSlide);
+
+            // Initialize the carousel
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>

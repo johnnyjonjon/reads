@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Daddy - Turning Awkward Conversations into Treasured Moments.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">
+                <img src="https://ucarecdn.com/d3b14ca5-ba26-47ed-91c3-511dee883c51/readydaddylogo.png" alt="Ready Daddy Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="tips.html">Tips for Meaningful Conversations</a></li>
+            <li><a href="starters.html">Try</a></li>
+        </ul>
+    </nav>
+
+    <div class="tab-container">
+        <button class="tab-button active" onclick="showTabContent(event, 'type1')">School</button>
+        <button class="tab-button" onclick="showTabContent(event, 'type2')">Outings</button>
+        <button class="tab-button" onclick="showTabContent(event, 'type3')">Heart to Heart</button>
+        <button class="tab-button" onclick="showTabContent(event, 'type4')">Growth</button>
+        <button class="tab-button" onclick="showTabContent(event, 'type5')">Interests</button>
+    </div>
+    <header>
+        <div id="initialContainer" class="container">
+            <h1 class="welcome-message">Choose a category above to<br> start the conversation. 🤩</h1>
+        </div>
+    </header>
+    <div class="output-container">
+        <div id="output" class="output">
+            <p id="conversationStarter"></p>
+        </div>
+    </div>
+
+    <h2 id="additionalText">Click anywhere on the starter above to get a new one.</h2>
+    <div id="buttonContainer" class="button-container">
+        <button id="previousButton" onclick="showPreviousStarter(event)">Previous Starter</button>
+        <button id="copyButton" onclick="copyToClipboard(event)">Copy to Clipboard</button>
+        <button id="shareButton" onclick="shareStarter(event)">Share</button>
+        <div id="notificationCard" class="notification hidden"></div> 
+    </div>
+
+    <!-- Notification Modal -->
+<div id="notificationModal" class="modal hidden">
+    <div class="modal-content">
+        <p id="notificationMessage"></p>
+        <button id="closeModalButton" onclick="closeNotification()">Close</button>
+    </div>
+</div>
+<div id="shareModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Share this post</h2>
+        <p id="draftContent"></p>
+        <div class="share-buttons">
+            <button id="shareFacebook" class="styled-button"><i class="fab fa-facebook"></i></button>
+            <button id="shareTwitter" class="styled-button"><i class="fab fa-twitter"></i></button>
+            <button id="shareWhatsApp" class="styled-button"><i class="fab fa-whatsapp"></i></button>
+            <button id="dismissModalButton">Dismiss</button>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h3>Every conversation matters.</h3>
+                <p>© 2024 All Rights Reserved, The Joget Company.</p>
+            </div>
+            <div class="footer-support">
+                <h3>Support</h3>
+                <p>Have questions to ask or share? <a href="mailto:jonjohnnyjon@outlook.com">Get in touch!</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="https://www.instagram.com/jonjohnnyjon/?hl=en"><i class="fab fa-instagram"></i>@jonjohnnyjon</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

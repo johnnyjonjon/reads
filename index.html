@@ -6,184 +6,8 @@
     <title>Ready Daddy - Turning Awkward Conversations into Treasured Moments.</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.5s ease;
-        }
-        h1 {
-            font-weight: 700;
-        }
-        .hidden {
-            display: none;
-        }
-        nav {
-            width: 100%;
-            padding: 10px 20px;
-            background-color: #ffffff00;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo img {
-            height: 100px; /* Adjusted for mobile responsiveness */
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-        .nav-links a {
-            color: #2d2d2d;
-            text-decoration: none;
-            font-size: 20px; /* Adjusted for mobile responsiveness */
-            font-weight: 700;
-            margin-left: 30px;
-            margin-right: 30px;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #7d3cff;
-        }
-        .container {
-            padding: 20px;
-            text-align: center;
-            height: calc(100% - 60px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .output-container {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .output {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            background-color: #f4f4f900;
-        }
-        .output.hidden {
-            display: none;
-        }
-        #conversationStarter {
-            font-size: 80px; /* Adjusted for mobile responsiveness */
-            margin: 0;
-            padding-left: 50px;
-            padding-right: 50px;
-            padding-bottom: 100px;
-            width: 100%;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
-            cursor: pointer;
-            color: #2d2d2d;
-            background-color: #f4f4f900;
-        }
-        .button-container-fixed {
-            position: fixed;
-            bottom: 10%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-        .button-container-fixed button {
-            background-color: #ffffff;
-            color: #2d2d2d;
-            border: 1px solid;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            outline: none;
-            transition: background-color 0.3s, color 0.3s;
-            margin-top: 20px;
-        }
-        .button-container-fixed button:not(:last-child) {
-            margin-right: 20px;
-        }
-        #copyButton {
-            background-color: #7d3cff;
-            color: white;
-            border: none;
-        }
-        #copyButton:hover {
-            background-color: #2d2d2d;
-            color: #ffffff;
-    
-        }
-        button:hover {
-            background-color: #2d2d2d;
-            color: #ffffff;
-        }
-        .notification {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-        .hidden {
-            display: none;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        @media (max-width: 768px) {
-            .logo img {
-                height: 60px; /* Adjusted for mobile responsiveness */
-            }
-            .nav-links a {
-                font-size: 16px; /* Adjusted for mobile responsiveness */
-                margin-left: 15px;
-                margin-right: 15px;
-            }
-            #conversationStarter {
-                font-size: 40px; /* Adjusted for mobile responsiveness */
-                padding-bottom: 50px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-            .button-container-fixed button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo img {
-                height: 40px; /* Adjusted for mobile responsiveness */
-            }
-            .nav-links a {
-                font-size: 14px; /* Adjusted for mobile responsiveness */
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            #conversationStarter {
-                font-size: 30px; /* Adjusted for mobile responsiveness */
-                padding-bottom: 30px;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            .button-container-fixed button {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-        }
-    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-27MNZD20Y9"></script>
@@ -197,17 +21,21 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="https://ucarecdn.com/d3b14ca5-ba26-47ed-91c3-511dee883c51/readydaddylogo.png" alt="Ready Daddy Logo">
+            <a href="#">
+                <img src="https://ucarecdn.com/d3b14ca5-ba26-47ed-91c3-511dee883c51/readydaddylogo.png" alt="Ready Daddy Logo">
+            </a>
         </div>
-        <div class="nav-links">
-            <a href="about.html" id="aboutButton">About</a>
-        </div>
-    </nav>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="tips.html">Tips for Meaningful Conversations</a></li>
+            <li><a href="starters.html">Try</a></li>
+        </ul>
+    </nav>    
     <div id="initialContainer" class="container">
-        <h2 class="welcome-message">Welcome to Ready Daddy!</h2>
-        <p class="welcome-message">Turn awkward conversations into treasured moments.</p>
+        <h1 class="welcome-message">😬 Turn awkward conversations<br> into treasured moments. 😍</h1>
+        <h2 class="welcome-message">Curated conversation starters to give you the confidence <br>to turn awkward silences into meaningful connections.</h2>
         <div class="button-container">
-            <button class="styled-button" onclick="generateStarter(event)">Let's Get Started</button>
+            <a href="starters.html" class="styled-button">Let's Get Started</a>
         </div>
     </div>
     <div class="output-container">
@@ -215,27 +43,23 @@
             <p id="conversationStarter"></p>
         </div>
     </div>
-    <div class="button-container-fixed">
-        <p class="click-anywhere-message">Click anywhere to generate a new starter.</p>
-        <div class="button-row">
-            <button id="previousButton" onclick="showPreviousStarter(event)">Previous Starter</button>
-            <button id="copyButton" onclick="copyToClipboard(event)">Copy to Clipboard</button>
-        </div>
-    </div>
-    <div id="notificationCard" class="notification hidden">Text Copied!</div>
-    <div id="notificationModal" class="modal hidden">
-        <div class="modal-content">
-            <p id="notificationMessage"></p>
-            <button id="closeModalButton" onclick="closeNotification()">Dismiss</button>
-        </div>
-    </div>
     <script src="script.js"></script>
-    <!-- Modal Structure -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <iframe id="googleSlidesIframe" src="" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h3>Every conversation matters.</h3>
+                <p>© 2024 All Rights Reserved, The Joget Company.</p>
+            </div>
+            <div class="footer-support">
+                <h3>Support</h3>
+                <p>Have questions to ask or share? <a href="mailto:jonjohnnyjon@outlook.com">Get in touch!</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="https://www.instagram.com/jonjohnnyjon/?hl=en><i class="fab fa-instagram"></i>@jonjohnnyjon</a>
+            </div>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>

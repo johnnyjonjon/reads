@@ -1,0 +1,14 @@
+<div class="button-container-fixed">
+    <p class="click-anywhere-message">Click anywhere to generate a new starter.</p>
+    <div class="button-row">
+        <button id="previousButton" onclick="showPreviousStarter(event)">Previous Starter</button>
+        <button id="copyButton" onclick="copyToClipboard(event)">Copy to Clipboard</button>
+    </div>
+</div>
+<div id="notificationCard" class="notification hidden">Text Copied!</div>
+<div id="notificationModal" class="modal hidden">
+    <div class="modal-content">
+        <p id="notificationMessage"></p>
+        <button id="closeModalButton" onclick="closeNotification()">Dismiss</button>
+    </div>
+</div>
