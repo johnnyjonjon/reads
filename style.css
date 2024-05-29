@@ -210,6 +210,7 @@ header {
     outline: none;
     font-weight: bold;
     text-decoration: none;
+    z-index: 1000;
 }
 
 .styled-button:hover {
@@ -228,18 +229,6 @@ header {
     gap: 15px;
 }
 
-.styled-button {
-    text-decoration: none;
-    color: #7d3cff;
-    border: 2px solid #7d3cff;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    background-color: #ffffff;
-}
-
 .styled-button:hover {
     background-color: #6a31dd;
     color: #ffffff;
@@ -256,7 +245,7 @@ header {
 }
 
 .button-container {
-    display: none;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     margin-top: 20px;
