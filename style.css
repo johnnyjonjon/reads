@@ -366,6 +366,7 @@ header {
     display: none; /* Ensure it's hidden after transition */
 }
 
+/* Ensure footer is scrollable */
 footer {
     background-color: #fff;
     color: #333;
@@ -373,12 +374,9 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
     width: 100%;
-    padding: 20px 50px;
     box-sizing: border-box;
-    z-index: 0;
     position: relative;
-    bottom: 0;
-
+    flex-shrink: 0;
 }
 .footer-container {
     display: flex;
