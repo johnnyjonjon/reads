@@ -697,9 +697,6 @@ button:hover {
     .footer-container > div {
         margin-bottom: 20px;
     }
-    .post-card {
-        width: calc(50% - 20px);
-    }
 }
 
 @media (max-width: 768px) {
@@ -714,7 +711,7 @@ button:hover {
         margin: 10px 0;
     }
     .nav-links a {
-        font-size: 4vw; /* Adjust based on viewport width */
+        font-size: 16px;
     }
     #initialContainer h1 {
         font-size: 10vw; /* Adjust based on viewport width */
@@ -728,9 +725,6 @@ button:hover {
     .button-container button {
         font-size: 4vw; /* Adjust based on viewport width */
         padding: 8px 16px;
-    }
-    .post-card {
-        width: calc(100% - 40px);
     }
     .modal-content {
         width: 90%;
@@ -750,7 +744,7 @@ button:hover {
         margin: 5px 0;
     }
     .nav-links a {
-        font-size: 3vw; /* Adjust based on viewport width */
+        font-size: 14px;
     }
     #initialContainer h1 {
         font-size: 12vw; /* Adjust based on viewport width */
