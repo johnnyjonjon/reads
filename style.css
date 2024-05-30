@@ -482,58 +482,6 @@ footer p, footer h4 {
     border-radius: 0 0 8px 8px;
 }
 
-@media (max-width: 768px) {
-    .logo img {
-        height: 60px;
-    }
-    .nav-links a {
-        font-size: 16px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    #conversationStarter {
-        font-size: 40px;
-        padding-bottom: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .footer-container > div {
-        margin-bottom: 20px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-branding, .footer-support, .footer-social {
-        margin-bottom: 10px;
-    }
-    .footer-social a {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo img {
-        height: 40px;
-    }
-    .nav-links a {
-        font-size: 14px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    #conversationStarter {
-        font-size: 30px;
-        padding-bottom: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .button-container-fixed button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-}
-
 .modal {
     position: fixed;
     left: 0;
@@ -726,4 +674,78 @@ button:hover {
     margin: 0 10px;
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .tab-button {
+        padding: 10px;
+        margin: 0 10px;
+    }
+    .footer-container > div {
+        margin-bottom: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-branding, .footer-support, .footer-social {
+        margin-bottom: 10px;
+    }
+    .footer-social a {
+        font-size: 20px;
+    }
+    .post-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+    .nav-links a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    #conversationStarter {
+        font-size: 40px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .button-container button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .post-card {
+        width: calc(100% - 40px);
+    }
+    .modal-content {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+    .nav-links a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    #conversationStarter {
+        font-size: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .button-container button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .modal-content {
+        width: 90%;
+        font-size: 12px;
+    }
 }
