@@ -376,6 +376,9 @@ footer {
     padding: 20px 50px;
     box-sizing: border-box;
     z-index: 0;
+    position: relative;
+    bottom: 0;
+
 }
 .footer-container {
     display: flex;
@@ -676,23 +679,23 @@ button:hover {
     z-index: 2;
 }
 
+/* Responsive font sizes */
+#initialContainer h1 {
+    font-size: 8vw; /* Adjust based on viewport width */
+}
+
+#conversationStarter {
+    font-size: 5vw; /* Adjust based on viewport width */
+}
+
+/* Media queries for responsive adjustments */
 @media (max-width: 1024px) {
-    .tab-button {
-        padding: 10px;
-        margin: 0 10px;
-    }
-    .footer-container > div {
-        margin-bottom: 20px;
-    }
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
-    .footer-branding, .footer-support, .footer-social {
-        margin-bottom: 10px;
-    }
-    .footer-social a {
-        font-size: 20px;
+    .footer-container > div {
+        margin-bottom: 20px;
     }
     .post-card {
         width: calc(50% - 20px);
@@ -711,19 +714,19 @@ button:hover {
         margin: 10px 0;
     }
     .nav-links a {
-        font-size: 16px;
+        font-size: 4vw; /* Adjust based on viewport width */
     }
     #initialContainer h1 {
-        font-size: 30px;
+        font-size: 10vw; /* Adjust based on viewport width */
     }
     #conversationStarter {
-        font-size: 30px;
+        font-size: 7vw; /* Adjust based on viewport width */
         padding-bottom: 50px;
         padding-left: 20px;
         padding-right: 20px;
     }
     .button-container button {
-        font-size: 14px;
+        font-size: 4vw; /* Adjust based on viewport width */
         padding: 8px 16px;
     }
     .post-card {
@@ -731,11 +734,7 @@ button:hover {
     }
     .modal-content {
         width: 90%;
-        font-size: 14px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
+        font-size: 4vw; /* Adjust based on viewport width */
     }
 }
 
@@ -751,27 +750,23 @@ button:hover {
         margin: 5px 0;
     }
     .nav-links a {
-        font-size: 14px;
+        font-size: 3vw; /* Adjust based on viewport width */
     }
     #initialContainer h1 {
-        font-size: 40px;
+        font-size: 12vw; /* Adjust based on viewport width */
     }
     #conversationStarter {
-        font-size: 30px;
+        font-size: 9vw; /* Adjust based on viewport width */
         padding-bottom: 30px;
         padding-left: 10px;
         padding-right: 10px;
     }
     .button-container button {
-        font-size: 12px;
+        font-size: 3.5vw; /* Adjust based on viewport width */
         padding: 6px 12px;
     }
     .modal-content {
         width: 90%;
-        font-size: 12px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
+        font-size: 3.5vw; /* Adjust based on viewport width */
     }
 }
