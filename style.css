@@ -703,12 +703,21 @@ button:hover {
     .logo img {
         height: 60px;
     }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
     .nav-links a {
         font-size: 16px;
-        margin: 0 10px;
+    }
+    #initialContainer h1 {
+        font-size: 30px;
     }
     #conversationStarter {
-        font-size: 40px;
+        font-size: 30px;
         padding-bottom: 50px;
         padding-left: 20px;
         padding-right: 20px;
@@ -724,15 +733,28 @@ button:hover {
         width: 90%;
         font-size: 14px;
     }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     .logo img {
         height: 40px;
     }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
     .nav-links a {
         font-size: 14px;
-        margin: 0 5px;
+    }
+    #initialContainer h1 {
+        font-size: 40px;
     }
     #conversationStarter {
         font-size: 30px;
@@ -747,5 +769,9 @@ button:hover {
     .modal-content {
         width: 90%;
         font-size: 12px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
